@@ -1,0 +1,15 @@
+<<<<<<< HEAD
+--Name: burgershotshit | 2022-02-18T18:12:30Z
+BoxZone:Create(vector3(-1191.69, -900.72, 13.98), 1, 1, {
+  name="burgershotshit",
+  heading=305,
+  --debugPoly=true,
+  minZ=11.38,
+  maxZ=15.38
+})
+;l';ll
+=======
+RICK ROLLED
+>>>>>>> 0b5f1df3a976b7254b6707108b3ce9b971bfbaa7
+
+dfasdsa
