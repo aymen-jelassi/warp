@@ -1,0 +1,222 @@
+<html>
+  <head>
+    <!-- Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,700i"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css-->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/materialize.min.css"
+      media="screen,projection"
+    />
+    <link type="text/css" rel="stylesheet" href="css/styles.css" />
+    <link type="text/css" rel="stylesheet" href="css/all.min.css" />
+    <!-- FontAwesome -->
+    <link type="text/css" rel="stylesheet" href="css/balloon.min.css" />
+    <!-- Tooltips -->
+    <title></title>
+  </head>
+  <body>
+    <div class="laptopContainer" id="container">
+      <div class="tablet-header">
+        <div class="header-left">
+          <span class="material-icons"> apple </span>
+          <p>Finder</p>
+          <p>File</p>
+          <p>Edit</p>
+          <p>View</p>
+        </div>
+        <div class="header-right">
+          <span class="material-icons batteryIcon"> battery_full </span>
+          <span class="material-icons"> wifi </span>
+          <span class="material-icons"> search </span>
+          <p id="date"></p>
+          <p id="time"></p>
+        </div>
+      </div>
+      <div class="tabletBody">
+        <div class="window" id="boostingApp" style="z-index: 1">
+          <div class="window-header">
+            <div id="closeBoostApp" class="window__border--button">x</div>
+            <div class="window__border--button">▭</div>
+            <div class="window__border--button">–</div>
+          </div>
+          <div id="boostAppMain" class="boostAppMain">
+            <div class="window-subHeader">
+              <button
+                class="waves-effect waves-light btn purple darken-3"
+                id="queueBtn"
+              >
+                JOIN QUEUE
+              </button>
+              <button
+                class="waves-effect waves-light btn purple darken-3"
+                id="leaveQueueBtn"
+              >
+                LEAVE QUEUE
+              </button>
+              <div class="lds-ellipsis" id="loading">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+            <div class="classProgressBar">
+              <p id="levelleft"></p>
+              <div id="myProgress">
+                <div id="myBar"></div>
+              </div>
+              <p id="levelright"></p>
+            </div>
+            <div class="window-body">
+              <ul id="carBoostList"></ul>
+            </div>
+          </div>
+          <div class="boostInProgress" id="boostInProgress">
+            <h3>CONTRACT ACTIVE</h3>
+            <h5 id="boostCarName"></h5>
+            <button
+              class="waves-effect waves-light btn red darken-1"
+              id="cancelBoost"
+            >
+              CANCEL BOOST
+            </button>
+          </div>
+          <div id="confirmDeclineModal" class="confirmDeclineModal">
+            <h5>Are you sure you want to decline this contract?</h5>
+            <div class="confirmBtnContainer">
+              <button
+                class="waves-effect waves-light btn green darken-1 btnConfirm1"
+                id="boostDeclineConfirm"
+              >
+                YES
+              </button>
+              <button
+                id="boostDeclineNo"
+                class="waves-effect waves-light btn red darken-1 btnConfirm2"
+              >
+                NO
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="appIconsFooter">
+        <div class="appIcon" id="openBoostApp">
+          <img
+            class="appIcon-img"
+            src="https://media.macosicons.com/parse/files/macOSicons/7ff3d87d89208ea3fe6c2f87f722b385_low_res_Darkglass_Suite.png"
+          />
+        </div>
+        <div class="appIcon">
+          <img
+            class="appIcon-img"
+            src="https://media.macosicons.com/parse/files/macOSicons/b074f5155483156798db46611dd625c4_Finder.png"
+          />
+        </div>
+        <div class="appIcon">
+          <img
+            class="appIcon-img"
+            src="https://media.macosicons.com/parse/files/macOSicons/22d56a1239568a7dd159776dc0095892_low_res_undefined.png"
+          />
+        </div>
+        <div class="appIcon">
+          <img
+            class="appIcon-img"
+            src="https://media.macosicons.com/parse/files/macOSicons/6d03d5e7a10021f195b36d90857cf16c_low_res_Chrome.png"
+          />
+        </div>
+        <div class="appIcon">
+          <img
+            class="appIcon-img"
+            src="https://media.macosicons.com/parse/files/macOSicons/713b898abdf919d015e3567d01a93182_Microsoft_Word.png"
+          />
+        </div>
+        <div class="appIcon">
+          <img
+            class="appIcon-img"
+            src="https://media.macosicons.com/parse/files/macOSicons/f30e6784beb2f0db2e2a8b3365f3b4d5_Microsoft_Excel.png"
+          />
+        </div>
+        <div class="appIcon">
+          <img
+            class="appIcon-img"
+            src="https://media.macosicons.com/parse/files/macOSicons/b0bf366b7d6cb78ca99cafb13406abd6_Spotify.png"
+          />
+        </div>
+        <div class="appIcon">
+          <img
+            class="appIcon-img"
+            src="https://media.macosicons.com/parse/files/macOSicons/18cf3b37ed0287e0ee49de7d92765ac9_low_res_WhatsApp.png"
+          />
+        </div>
+        <div class="appIcon">
+          <img
+            class="appIcon-img"
+            src="https://media.macosicons.com/parse/files/macOSicons/a53e97d96c33f437090604803814f74d_Photos.png"
+          />
+        </div>
+        <div class="appIcon">
+          <img
+            class="appIcon-img"
+            src="https://media.macosicons.com/parse/files/macOSicons/6b6329b772c8698028793e1c42d4e251_low_res_Ableton_Live_Suite_11.png"
+          />
+        </div>
+        <div class="appIcon">
+          <img
+            class="appIcon-img"
+            src="https://media.macosicons.com/parse/files/macOSicons/aa77df2eea918650e933e76bdcce92e1_Settings.png"
+          />
+        </div>
+        <div class="appIcon">
+          <img
+            class="appIcon-img"
+            src="https://media.macosicons.com/parse/files/macOSicons/08c2926096472e7499825023747852bf_low_res_Steam.png"
+          />
+        </div>
+        <div class="appIcon">
+          <img
+            class="appIcon-img"
+            src="https://media.macosicons.com/parse/files/macOSicons/f4284e95e53891045ff0008c1df3aa80_Netflix.png"
+          />
+        </div>
+        <div class="appIcon">
+          <img
+            class="appIcon-img"
+            src="https://media.macosicons.com/parse/files/macOSicons/a0f136fb7df7e576563129be0565ccf3_Discord.png"
+          />
+        </div>
+        <div class="appIcon">
+          <img
+            class="appIcon-img"
+            src="https://media.macosicons.com/parse/files/macOSicons/af21153d07a2e92bde7b2ad155055489_low_res_1619092574091.png"
+          />
+        </div>
+        <div class="appIcon">
+          <img
+            class="appIcon-img"
+            src="https://media.macosicons.com/parse/files/macOSicons/896c2c2b260c9a1fc7fc4c2d151ce489_low_res_1619219606578.png"
+          />
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="nui://game/ui/jquery.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>

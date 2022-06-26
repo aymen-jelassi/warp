@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="admin-menu.css" />
+    <link rel="stylesheet" type="text/css" href="styleguide.css" />
+    <link rel="stylesheet" type="text/css" href="globals.css" />
+  </head>
+  <body id ="adminmenu" style="margin: 0; display:none">
+    <input type="hidden" id="anPageName" name="page" value="admin-menu" />
+    <div class="container-center-horizontal">
+      <div class="admin-menu animate-enter screen">
+        <div class="overlap-group23">
+          <div class="maincomp">
+            <div class="overlap-group-2">
+              <div class="rectangle-1"></div>
+              <div class="rectangle-2"></div>
+              <div class="rectangle-7"></div>
+              <div class="rectangle-6"></div>
+              <!-- Developer Mode Start -->
+              <img id="developer-inactive" class="developer-mode" onclick="pressButton(21);" style="background-color: #c4c4c4; border-radius: 1px; width: 45px; height: 38px; left: 5px; margin-top: 800px;" src="https://cdn.discordapp.com/attachments/911361376168083486/948612849146658856/term.png" />
+              <img id="developer-active" class="developer-mode" onclick="pressButton(21);" style="background-color: #c4c4c4; border-radius: 1px; width: 45px; height: 38px; left: 5px; margin-top: 800px;" src="https://cdn.discordapp.com/attachments/911361376168083486/948651258598793297/termactive.png" />
+              <!-- Developer Mode End -->
+
+              <!-- Debug Mode Start -->
+              <img class="debug-mode" onclick="pressButton(12);" style="background-color: #c4c4c4; border-radius: 1px; width: 45px; height: 38px; left: 5px; margin-top: 750px;" src="https://cdn.discordapp.com/attachments/911361376168083486/948612848693694464/debug.png" />
+              <!-- Debug Mode End -->
+              <h1 class="evan-top-bar-1 valign-text-middle">All</h1>
+              <h1 class="evan-top-bar-2 valign-text-middle">Player</h1>
+              <h1 class="evan-top-bar-3 valign-text-middle">Utility</h1>
+              <h1 class="evan-top-bar-4 valign-text-middle">User</h1>
+              </div>
+          </div>
+          <div class="closecomp smart-layers-pointers"><div class="text-2 valign-text-middle">&lt;</div></div>
+          <div class="bennyscomp smart-layers-pointers">
+            <div class="overlap-group">
+              <!-- <img class="star-1" src="https://i.imgur.com/uDa2gEm.png" /> -->
+              <button onclick="pressButton(1);" class="access-bennys roboto-medium-black-20px"style="border-color:transparent; background-color:rgba(255, 255, 255, 0);"><span>Access Bennys</span></button>
+
+              <!-- <div class="access-bennys valign-text-middle roboto-medium-black-20px">Access Bennys</div> -->
+              <div class="text-3 valign-text-middle roboto-bold-black-24px">⌄</div>
+            </div>
+          </div>
+          <div class="spawncomp smart-layers-pointers">
+            <div class="overlap-group-1">
+              <!-- <img class="star-1" src="https://i.imgur.com/uDa2gEm.png" /> -->
+              <button onclick="pressButton(2);" class="access-bennys roboto-medium-black-20px"style="border-color:transparent; background-color:rgba(255, 255, 255, 0);"><span>Spawn Vehicle</span></button>
+
+              <div class="i720717 valign-text-middle roboto-bold-black-24px">⌄</div>
+            </div>
+          </div>
+          <div class="spawncomp-1 smart-layers-pointers">
+            <div class="overlap-group-1">
+              <!-- <img class="star-1" src="https://i.imgur.com/uDa2gEm.png" /> -->
+              <button onclick="pressButton(3);" class="spawn-vehicle-i7257 roboto-medium-black-20px"style="border-color:transparent; background-color:rgba(255, 255, 255, 0);"><span>Spawn Item</span></button>
+              <!-- <div class="spawn-vehicle-i7257 valign-text-middle roboto-medium-black-20px">Spawn Item</div> -->
+              <div class="i725717 valign-text-middle roboto-bold-black-24px">⌄</div>
+            </div>
+          </div>
+          <div class="spawncomp-2 smart-layers-pointers">
+            <div class="overlap-group">
+              <!-- <img class="star-1" src="https://i.imgur.com/uDa2gEm.png" /> -->
+              <button onclick="pressButton(4);" class="spawn-vehicle-i7307 roboto-medium-black-20px"style="border-color:transparent; background-color:rgba(255, 255, 255, 0);"><span>Weather / Time</span></button>
+
+              <!-- <div class="spawn-vehicle-i7307 valign-text-middle roboto-medium-black-20px">Weather / Time</div> -->
+              <div class="i730717 valign-text-middle roboto-bold-black-24px">⌄</div>
+            </div>
+          </div>
+          <div class="spawncomp-3 smart-layers-pointers">
+            <div class="overlap-group">
+              <!-- <img class="star-1" src="https://i.imgur.com/uDa2gEm.png" /> -->
+              <button onclick="pressButton(5);" class="spawn-vehicle-i7357 roboto-medium-black-20px"style="border-color:transparent; background-color:rgba(255, 255, 255, 0);"><span>Repair Vehicle</span></button>
+
+              <!-- <div class="spawn-vehicle-i7357 valign-text-middle roboto-medium-black-20px">Repair Vehicle</div> -->
+              <div class="i735717 valign-text-middle roboto-bold-black-24px">⌄</div>
+            </div>
+          </div>
+          <div class="spawncomp-4 smart-layers-pointers">
+            <div class="overlap-group">
+              <!-- <img class="star-1" src="https://i.imgur.com/uDa2gEm.png" /> -->
+              <button onclick="pressButton(6);" class="spawn-vehicle-i7407 roboto-medium-black-20px"style="border-color:transparent; background-color:rgba(255, 255, 255, 0);"><span>Change Model</span></button>
+
+              <!-- <div class="spawn-vehicle-i7407 valign-text-middle roboto-medium-black-20px">Change Model</div> -->
+              <div class="i740717 valign-text-middle roboto-bold-black-24px">⌄</div>
+            </div>
+          </div>
+          <div class="spawncomp-5 smart-layers-pointers">
+            <div class="overlap-group">
+              <!-- <img class="star-1" src="https://i.imgur.com/uDa2gEm.png" /> -->
+              <button onclick="pressButton(7);" class="spawn-vehicle-i7467 roboto-medium-black-20px"style="border-color:transparent; background-color:rgba(255, 255, 255, 0);"><span>Toggle Godmode</span></button>
+
+              <!-- <div class="spawn-vehicle-i7467 valign-text-middle roboto-medium-black-20px">Sir DMO Mode</div> -->
+              <div class="i746717 valign-text-middle roboto-bold-black-24px">⌄</div>
+            </div>
+          </div>
+          <div class="spawncomp-6 smart-layers-pointers">
+            <div class="overlap-group-1">
+              <!-- <img class="star-1" src="https://i.imgur.com/uDa2gEm.png" /> -->
+              <button onclick="pressButton(8);" class="spawn-vehicle-i7517 roboto-medium-black-20px"style="border-color:transparent; background-color:rgba(255, 255, 255, 0);"><span>Teleport To Marker</span></button>
+
+              <!-- <div class="spawn-vehicle-i7517 valign-text-middle roboto-medium-black-20px">Teleport To Marker</div> -->
+              <div class="i751717 valign-text-middle roboto-bold-black-24px">⌄</div>
+            </div>
+          </div>
+          <div class="spawncomp-7 smart-layers-pointers">
+            <div class="overlap-group-1">
+              <!-- <img class="star-1" src="https://i.imgur.com/uDa2gEm.png" /> -->
+              <button onclick="pressButton(9);" class="spawn-vehicle-i7567 roboto-medium-black-20px"style="border-color:transparent; background-color:rgba(255, 255, 255, 0);"><span>Toggle Noclip</span></button>
+
+              <!-- <div class="spawn-vehicle-i7567 valign-text-middle roboto-medium-black-20px">No Clip Babyyy</div> -->
+              <div class="i756717 valign-text-middle roboto-bold-black-24px">⌄</div>
+            </div>
+          </div>
+          <div class="spawncomp-8 smart-layers-pointers">
+            <div class="overlap-group-1">
+              <!-- <img class="star-1" src="https://i.imgur.com/uDa2gEm.png" /> -->
+              <button onclick="ReviveDist();" class="waves-effect waves-light spawn-vehicle-i7617 roboto-medium-black-20px"style="border-color:transparent; background-color:rgba(255, 255, 255, 0);"><span>Revive In Distance</span></button>
+
+              <!-- <div class="spawn-vehicle-i7617 valign-text-middle roboto-medium-black-20px">Revive / Heal Player</div> -->
+              <div class="i761717 valign-text-middle roboto-bold-black-24px">⌄</div>
+            </div>
+          </div>
+          <div class="spawncomp-9 smart-layers-pointers">
+            <div class="overlap-group">
+              <!-- <img class="star-1" src="https://i.imgur.com/uDa2gEm.png" /> -->
+              <button onclick="pressButton(11);" class="spawn-vehicle-i7667 roboto-medium-black-20px"style="border-color:transparent; background-color:rgba(255, 255, 255, 0);"><span>Teleport To Coordinates</span></button>
+
+              <!-- <div class="spawn-vehicle-i7667 valign-text-middle roboto-medium-black-20px">Teleport To Coordinates</div> -->
+              <div class="i766717 valign-text-middle roboto-bold-black-24px">⌄</div>
+            </div>
+          </div>
+          <!-- <div class="spawncomp-10 smart-layers-pointers">
+            <div class="overlap-group">
+              <!-- <img class="star-1" src="https://i.imgur.com/uDa2gEm.png" /> -->
+              <!-- <button onclick="pressButton(12);" class="spawn-vehicle-i7717 roboto-medium-black-20px"style="border-color:transparent; background-color:rgba(255, 255, 255, 0);"><span>Toggle Debug</span></button> -->
+
+              <!-- <div class="spawn-vehicle-i7717 valign-text-middle roboto-medium-black-20px">Become PED Model</div> -->
+              <!-- <div class="i771717 valign-text-middle roboto-bold-black-24px">+</div> -->
+            <!--</div>
+          </div> -->
+          <div class="spawncomp-10 smart-layers-pointers">
+            <div class="overlap-group">
+              <!-- <img class="star-1" src="https://i.imgur.com/uDa2gEm.png" /> -->
+              <button onclick="pressButton(13);" class="spawn-vehicle-i7767 roboto-medium-black-20px"style="border-color:transparent; background-color:rgba(255, 255, 255, 0);"><span>Delete Closest Entity</span></button>
+
+              <!-- <div class="spawn-vehicle-i7767 valign-text-middle roboto-medium-black-20px">Delete Closest Entity</div> -->
+              <div class="i776717 valign-text-middle roboto-bold-black-24px">⌄</div>
+            </div>
+          </div>
+          <div class="spawncomp-11 smart-layers-pointers">
+            <div class="overlap-group">
+              <!-- <img class="star-1" src="https://i.imgur.com/uDa2gEm.png" /> -->
+              <button onclick="pressButton(14);" class="spawn-vehicle-i7817 roboto-medium-black-20px"style="border-color:transparent; background-color:rgba(255, 255, 255, 0);"><span>C-Say / T-Say</span></button>
+
+              <!-- <div class="spawn-vehicle-i7817 valign-text-middle roboto-medium-black-20px">C-Say / T-Say</div> -->
+              <div class="i781717 valign-text-middle roboto-bold-black-24px">⌄</div>
+            </div>
+          </div>
+          <div class="spawncomp-12 smart-layers-pointers">
+            <div class="overlap-group-1">
+              <!-- <img class="star-1" src="https://i.imgur.com/uDa2gEm.png" /> -->
+              <button onclick="pressButton(15);" class="spawn-vehicle-i7867 roboto-medium-black-20px"style="border-color:transparent; background-color:rgba(255, 255, 255, 0);"><span>Set Vehicle Garage State</span></button>
+
+              <!-- <div class="spawn-vehicle-i7867 valign-text-middle roboto-medium-black-20px">
+                Set Vehicle Garage State
+              </div> -->
+              <div class="i786717 valign-text-middle roboto-bold-black-24px">⌄</div>
+            </div>
+          </div>
+          <div class="spawncomp-13 smart-layers-pointers">
+            <div class="overlap-group-1">
+              <!-- <img class="star-1" src="https://i.imgur.com/uDa2gEm.png" /> -->
+              <button onclick="pressButton(16);" class="spawn-vehicle-i7917 roboto-medium-black-20px"style="border-color:transparent; background-color:rgba(255, 255, 255, 0);"><span>Access Clothing Menu</span></button>
+
+              <!-- <div class="spawn-vehicle-i7917 valign-text-middle roboto-medium-black-20px">Access Clothing Menu</div> -->
+              <div class="i791717 valign-text-middle roboto-bold-black-24px">⌄</div>
+            </div>
+          </div>
+          <div class="spawncomp-14 smart-layers-pointers">
+            <div class="overlap-group-1">
+              <!-- <img class="star-1" src="https://i.imgur.com/uDa2gEm.png" /> -->
+              <button onclick="pressButton(17);" class="spawn-vehicle-i7967 roboto-medium-black-20px"style="border-color:transparent; background-color:rgba(255, 255, 255, 0);"><span>Access Barbers Menu</span></button>
+
+              <!-- <div class="spawn-vehicle-i7967 valign-text-middle roboto-medium-black-20px">Access Barbers Menu</div> -->
+              <div class="i796717 valign-text-middle roboto-bold-black-24px">⌄</div>
+            </div>
+          </div>
+          <div class="spawncomp-15 smart-layers-pointers">
+            <div class="overlap-group">
+              <!-- <img class="star-1" src="https://i.imgur.com/uDa2gEm.png" /> -->
+              <button onclick="pressButton(18);" class="spawn-vehicle-i7101 roboto-medium-black-20px"style="border-color:transparent; background-color:rgba(255, 255, 255, 0);"><span>Give Weapons License To Player</span></button>
+
+              <!-- <div class="spawn-vehicle-i7101 valign-text-middle roboto-medium-black-20px">
+                Give Weapons License To Player
+              </div> -->
+              <div class="i7101717 valign-text-middle roboto-bold-black-24px">⌄</div>
+            </div>
+          </div>
+          <div class="spawncomp-16 smart-layers-pointers">
+            <div class="overlap-group">
+              <!-- <img class="star-1" src="https://i.imgur.com/uDa2gEm.png" /> -->
+              <button onclick="pressButton(19);" class="spawn-vehicle-i7106 roboto-medium-black-20px"style="border-color:transparent; background-color:rgba(255, 255, 255, 0);"><span>Give Hunting To Player</span></button>
+
+              <!-- <div class="spawn-vehicle-i7106 valign-text-middle roboto-medium-black-20px">
+                Give Driving License To Player
+              </div> -->
+              <div class="i7106717 valign-text-middle roboto-bold-black-24px">⌄</div>
+            </div>
+          </div>
+          <div class="spawncomp-17 smart-layers-pointers">
+            <div class="overlap-group">
+              <!-- <img class="star-1" src="https://i.imgur.com/uDa2gEm.png" /> -->
+              <button onclick="pressButton(20);" class="spawn-vehicle-i7111 roboto-medium-black-20px"style="border-color:transparent; background-color:rgba(255, 255, 255, 0);"><span>Max Stats</span></button>
+
+              <!-- <div class="spawn-vehicle-i7111 valign-text-middle roboto-medium-black-20px">Hunger / Thirst Max</div> -->
+              <div class="i7111717 valign-text-middle roboto-bold-black-24px">⌄</div>
+            </div>
+          </div>
+          <div class="spawncomp-19 smart-layers-pointers">
+            <div class="overlap-group">
+              <!-- <img class="star-1" src="https://i.imgur.com/uDa2gEm.png" /> -->
+              <button onclick="pressButton(21);" class="spawn-vehicle-i7111 roboto-medium-black-20px"style="border-color:transparent; background-color:rgba(255, 255, 255, 0);"></button>
+              
+              <!-- <div class="spawn-vehicle-i7111 valign-text-middle roboto-medium-black-20px">Toggle Developer Mode</div> -->
+              <!-- <div class="i7116717 valign-text-middle roboto-bold-black-24px">+</div> -->
+            </div>
+          </div>
+          <div class="spawncomp-20 smart-layers-pointers">
+            <div class="overlap-group-1">
+              <button onclick="pressButton(22);" class="spawn-vehicle-i7121 roboto-medium-black-20px"style="border-color:transparent; background-color:rgba(255, 255, 255, 0);"><span>Search Player Inventory</span></button>
+
+              <!-- <div class="spawn-vehicle-i7121 valign-text-middle roboto-medium-black-20px">Search Player Inventory</div> -->
+              <div class="i7121717 valign-text-middle roboto-bold-black-24px">⌄</div>
+            </div>
+          </div>
+          <div class="spawncomp-21 smart-layers-pointers">
+            <div class="overlap-group-1">
+              <!-- <img class="star-1" src="https://i.imgur.com/uDa2gEm.png" /> -->
+              <button onclick="pressButton(23);" class="spawn-vehicle-i7122 roboto-medium-black-20px"style="border-color:transparent; background-color:rgba(255, 255, 255, 0);"><span>Set Dev Spawn</span></button>
+
+              <!-- <div class="spawn-vehicle-i7122 valign-text-middle roboto-medium-black-20px">Set Dev Spawn</div> -->
+              <div class="i7122717 valign-text-middle roboto-bold-black-24px">⌄</div>
+            </div>
+          </div>
+          <div class="spawncomp-22 smart-layers-pointers">
+            <div class="overlap-group-1">
+              <!-- <img class="star-1" src="https://i.imgur.com/uDa2gEm.png" /> -->
+              <button onclick="pressButton(24);" class="spawn-vehicle-i7123 roboto-medium-black-20px"style="border-color:transparent; background-color:rgba(255, 255, 255, 0);"><span>Set Character Pass</span></button>
+
+              <!-- <div class="spawn-vehicle-i7122 valign-text-middle roboto-medium-black-20px">Set Dev Spawn</div> -->
+              <div class="i7122717 valign-text-middle roboto-bold-black-24px">⌄</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+    <script type="text/javascript" src="nui://game/ui/jquery.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/debounce.js"></script>
+  </body>
+</html>

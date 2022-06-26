@@ -1,0 +1,54 @@
+{
+    "locals": "en",
+
+    "EnableAcFunctions": true,
+    
+    "allLogs": true,
+    "postals": true,
+    "weaponLog": true,
+    "inlineField": true,
+
+    "playerId": true,
+    "steamId": true,
+    "steamUrl": true,
+    "discordId": true,
+    "license": true,
+    "license2": true,
+    "ip": true,
+    "playerPing": true,
+
+    "Session": false,
+    "PlayTime": false,
+    "playerHealth": true,
+    "playerArmor": true,
+    "timestamp": true,
+
+    "forceSteam": false,
+
+    "nameChangePerms": "jd.staff",
+    "logHistoryPerms": "jd.staff",
+    "screenshotPerms": "jd.staff",
+    "AntiCheatBypass": "jd.staff",
+
+    "DiscordUpdateNotify": true,
+
+    "userName": "Bot Username Here",
+    "avatar": "https://via.placeholder.com/30x30",
+    "communityName": "Community Name Here",
+    "communityLogo": "https://via.placeholder.com/30x30",
+    "footerText": "2020 - 2021 © Prefech",
+    "footerIcon": "https://via.placeholder.com/30x30",
+
+    "PrefechGlobalBans": true,
+    "GlobalBanBypass": [],
+
+    "WeaponsNotLogged": [
+        "WEAPON_SNOWBALL",
+        "WEAPON_FIREEXTINGUISHER"
+    ],
+
+    "Commands": {
+        "logs": "LogHistoryCommand",
+        "screenshot": "ScreenshotCommand"
+    }
+}

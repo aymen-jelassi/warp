@@ -1,0 +1,43 @@
+body{
+    overflow: hidden;
+    background-color: transparent;
+}
+
+#container-status {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0%);
+    background: #222831;
+    color: #fff;
+    height: 100px; /*110px*/
+    width: 300px;
+    border: 1px solid black;
+}
+
+.status-title {
+    color: #fff;
+	font-family: 'Noto Sans SC', sans-serif;
+	font-size: 16px;
+	text-shadow: -1px 1px 0 #37474f, 1px 1px 0 #37474f, 1px -1px 0 #37474f, -1px -1px 0 #37474f;
+	margin-top: 5px;
+	margin-left: 10px;
+}
+
+.status-hand {
+    color: #fff;
+	font-family: 'Noto Sans SC', sans-serif;
+	font-size: 16px;
+	text-shadow: -1px 1px 0 #37474f, 1px 1px 0 #37474f, 1px -1px 0 #37474f, -1px -1px 0 #37474f;
+	margin-top: 5px;
+	margin-left: 10px;
+}
+
+.status-dealers {
+    color: #fff;
+	font-family: 'Noto Sans SC', sans-serif;
+	font-size: 15px;
+	text-shadow: -1px 1px 0 #37474f, 1px 1px 0 #37474f, 1px -1px 0 #37474f, -1px -1px 0 #37474f;
+	margin-top: 10px;
+    margin-left: 10px;
+}

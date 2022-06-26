@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+#muzica {
+display: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.gradientoverlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to right, rgba(119,118,255,0.75), rgba(174,44,241,0.75));
+}
+
+.fin-slides-wrapper {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  margin-top: 80%;
+ /* bottom: 10%;  */
+  z-index: 99;
+  font-family: 'Prompt', sans-serif !important;
+}
+
+
+.logo {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 8s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0%   {opacity: 1; width:20%; left:40%; top:30%}
+  12.5%   {opacity: 1; width:20%; left:40%; top:30%}  
+  25%   {opacity: 0.7; width: 18%; left:41%; top:32%}
+  37.5%   {opacity: 1; width:20%; left:40%; top:30%}
+  50%   {opacity: 1; width:20%; left:40%; top:30%} 
+  62.5% {opacity: 1; width:20%; left:40%; top:30%} 
+  75%   {opacity: 0.7; width: 18%; left: 41%; top:32%} 
+  87.5% {opacity: 1; width:20%; left:40%; top:30%}
+  100% {opacity: 1; width:20%; left:40%; top:30%}
+}

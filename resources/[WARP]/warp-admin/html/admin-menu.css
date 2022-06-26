@@ -1,0 +1,1155 @@
+/* screen - admin-menu */
+
+.admin-menu {
+  position:absolute;
+  max-height: 500px;
+  max-width: 680px;
+  opacity: 0;
+  /* transform: translate(0, 120px); */
+  right:5vh;
+  -moz-user-select: none;
+  -khtml-user-select:none;
+  -webkit-user-select:none;
+  user-select:none;
+}
+
+.admin-menu.animate-enter {
+  animation: animate-enter-frames 0.50s ease-in-out 0.50s 1 normal forwards;
+  opacity: 0;
+  transform: translate(0, 120px);
+}
+
+@keyframes animate-enter-frames {
+  from{opacity: 0;
+transform: translate(0, 120px);
+}
+to{opacity: 1;
+transform: translate(200,0);
+}
+}
+
+.admin-menu .overlap-group23 {
+  height: 891px;
+  left: 42px;
+  position: relative;
+  width: 547px;
+}
+
+.admin-menu .maincomp {
+  align-items: flex-start;
+  display: flex;
+  height: 891px;
+  justify-content: flex-end;
+  left: 0;
+  min-width: 547px;
+  position: absolute;
+  top: 0;
+}
+
+.admin-menu .overlap-group-2 {
+  height: 920px;
+  position: relative;
+  width: 534px;
+}
+
+.admin-menu .rectangle-1 {
+  background-color: #3b4552;
+  height: 900px;
+  left: 0;
+  position: absolute;
+  top: -19px;
+  width: 516px;
+}
+
+.admin-menu .rectangle-2 {
+  /* background-color: var(--shark); */
+  height: 897px;
+  left: 0;
+  position: absolute;
+  top: 3px;
+  width: 7px;
+}
+
+.admin-menu .rectangle-7 {
+  /* background-color: var(--shark); */
+  height: 900px;
+  left: 509px;
+  position: absolute;
+  top: 0;
+  width: 7px;
+}
+
+.admin-menu .rectangle-6 {
+  /* background-color: var(--shark); */
+  height: 8px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 515px;
+}
+
+.admin-menu .evan-top-bar-1 {
+  color: #ffffff;
+  background-color: rgb(39, 39, 39);
+  font-family: var(--font-family-roboto);
+  font-size: var(15px);
+  height: 45px;
+  left: 57px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: -12px;
+  width: 80px;
+}
+
+.admin-menu .evan-top-bar-2 {
+  color: #ffffff;
+  background-color: rgb(39, 39, 39);
+  font-family: var(--font-family-roboto);
+  font-size: var(15px);
+  height: 45px;
+  left: 140px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: -12px;
+  width: 80px;
+}
+
+.admin-menu .evan-top-bar-3 {
+  color: #ffffff;
+  background-color: rgb(39, 39, 39);
+  font-family: var(--font-family-roboto);
+  font-size: var(15px);
+  height: 45px;
+  left: 223px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: -12px;
+  width: 80px;
+}
+
+.admin-menu .evan-top-bar-4 {
+  color: #ffffff;
+  background-color: rgb(39, 39, 39);
+  font-family: var(--font-family-roboto);
+  font-size: var(15px);
+  height: 45px;
+  left: 306px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: -12px;
+  width: 80px;
+}
+
+.admin-menu .evan-top-bar-5 {
+  color: #ffffff;
+  background-color: rgb(39, 39, 39);
+  font-family: var(--font-family-roboto);
+  font-size: var(15px);
+  height: 45px;
+  left: 396px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: -12px;
+  width: 100px;
+}
+
+.admin-menu .evan-top-bar-5:hover {
+  background-color: rgba(39, 39, 39, 0.761);
+}
+
+.admin-menu .evan-top-bar-4:hover {
+  background-color: rgba(39, 39, 39, 0.761);
+}
+
+.admin-menu .evan-top-bar-3:hover {
+  background-color: rgba(39, 39, 39, 0.761);
+}
+
+.admin-menu .evan-top-bar-2:hover {
+  background-color: rgba(39, 39, 39, 0.761);
+}
+
+.admin-menu .evan-top-bar-1:hover {
+  background-color: rgba(39, 39, 39, 0.761);
+}
+
+.admin-menu .side-bar {
+  background-color: rgb(0, 83, 192);
+}
+
+.admin-menu .closecomp {
+  background-color: #cdced1;
+  border-radius: 1px;
+  height: 50px;
+  left: -5px;
+  pointer-events: auto;
+  position: absolute;
+  top: -18px;
+  transition: all 0.2s ease;
+  width: 24px;
+}
+
+.admin-menu .text-2 {
+  color: var(--black);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-l);
+  height: 14px;
+  left: 1px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 17px;
+  width: 13px;
+}
+
+.admin-menu .bennyscomp {
+  background-color: var(--mist-gray);
+  border-radius: 1px;
+  height: 33px;
+  left: 71px;
+  pointer-events: auto;
+  position: absolute;
+  top: 39px;
+  transition: all 0.2s ease;
+  width: 444px;
+}
+
+.admin-menu .overlap-group {
+  height: 33px;
+  left: 4px;
+  position: relative;
+  width: 479px;
+}
+
+.admin-menu .star-1 {
+  padding: 5px;
+  height: 22px;
+  left: 0;
+  position: absolute;
+  top: 5px;
+  width: 25px;
+}
+
+.admin-menu .developer-mode {
+  padding: 5px;
+  height: 22px;
+  left: 0;
+  position: absolute;
+  top: 5px;
+  width: 25px;
+}
+
+.admin-menu .debug-mode {
+  padding: 5px;
+  height: 22px;
+  left: 0;
+  position: absolute;
+  top: 5px;
+  width: 25px;
+}
+
+.admin-menu .access-bennys {
+  height: 33px;
+  left: 10px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 461px;
+}
+
+.admin-menu .text-3 {
+  height: 23px;
+  left: 410px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: -2px;
+  width: 21px;
+}
+
+.admin-menu .spawncomp {
+  background-color: var(--mist-gray);
+  border-radius: 1px;
+  height: 32px;
+  left: 71px;
+  pointer-events: auto;
+  position: absolute;
+  top: 76px;
+  transition: all 0.2s ease;
+  width: 444px;
+}
+
+.admin-menu .overlap-group-1 {
+  height: 32px;
+  left: 4px;
+  position: relative;
+  width: 479px;
+}
+
+.admin-menu .star-1-1 {
+  height: 21px;
+  left: 0;
+  position: absolute;
+  top: 5px;
+  width: 19px;
+}
+
+.admin-menu .text-4 {
+  height: 32px;
+  left: 10px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 461px;
+}
+
+.admin-menu .i720717 {
+  height: 22px;
+  left: 410px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: -1px;
+  width: 21px;
+}
+
+.admin-menu .spawncomp-1 {
+  background-color: var(--mist-gray);
+  border-radius: 1px;
+  height: 32px;
+  left: 71px;
+  pointer-events: auto;
+  position: absolute;
+  top: 113px;
+  transition: all 0.2s ease;
+  width: 444px;
+}
+
+.admin-menu .spawn-vehicle-i7257 {
+  height: 32px;
+  left: 10px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 461px;
+}
+
+.admin-menu .i725717 {
+  height: 22px;
+  left: 410px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: -2px;
+  width: 21px;
+}
+
+.admin-menu .spawncomp-2 {
+  background-color: var(--mist-gray);
+  border-radius: 1px;
+  height: 33px;
+  left: 71px;
+  pointer-events: auto;
+  position: absolute;
+  top: 150px;
+  transition: all 0.2s ease;
+  width: 444px;
+}
+
+.admin-menu .spawn-vehicle-i7307 {
+  height: 33px;
+  left: 10px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 461px;
+}
+
+.admin-menu .i730717 {
+  height: 23px;
+  left: 410px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: -5px;
+  width: 21px;
+}
+
+.admin-menu .spawncomp-3 {
+  background-color: var(--mist-gray);
+  border-radius: 1px;
+  height: 33px;
+  left: 71px;
+  pointer-events: auto;
+  position: absolute;
+  top: 187px;
+  transition: all 0.2s ease;
+  width: 444px;
+}
+
+.admin-menu .spawn-vehicle-i7357 {
+  height: 33px;
+  left: 10px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 461px;
+}
+
+.admin-menu .i735717 {
+  height: 23px;
+  left: 410px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: -4px;
+  width: 21px;
+}
+
+.admin-menu .spawncomp-4 {
+  background-color: var(--mist-gray);
+  border-radius: 1px;
+  height: 33px;
+  left: 71px;
+  pointer-events: auto;
+  position: absolute;
+  top: 224px;
+  transition: all 0.2s ease;
+  width: 444px;
+}
+
+.admin-menu .spawn-vehicle-i7407 {
+  height: 33px;
+  left: 10px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 461px;
+}
+
+.admin-menu .i740717 {
+  height: 23px;
+  left: 410px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: -4px;
+  width: 21px;
+}
+
+.admin-menu .spawncomp-5 {
+  background-color: var(--mist-gray);
+  border-radius: 1px;
+  height: 33px;
+  left: 71px;
+  pointer-events: auto;
+  position: absolute;
+  top: 261px;
+  transition: all 0.2s ease;
+  width: 444px;
+}
+
+.admin-menu .spawn-vehicle-i7467 {
+  height: 33px;
+  left: 10px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 461px;
+}
+
+.admin-menu .i746717 {
+  height: 23px;
+  left: 410px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: -4px;
+  width: 21px;
+}
+
+.admin-menu .spawncomp-6 {
+  background-color: var(--mist-gray);
+  border-radius: 1px;
+  height: 32px;
+  left: 71px;
+  pointer-events: auto;
+  position: absolute;
+  top: 299px;
+  transition: all 0.2s ease;
+  width: 444px;
+}
+
+.admin-menu .spawn-vehicle-i7517 {
+  height: 32px;
+  left: 10px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 461px;
+}
+
+.admin-menu .i751717 {
+  height: 22px;
+  left: 410px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: -4px;
+  width: 21px;
+}
+
+.admin-menu .spawncomp-7 {
+  background-color: var(--mist-gray);
+  border-radius: 1px;
+  height: 32px;
+  left: 71px;
+  pointer-events: auto;
+  position: absolute;
+  top: 336px;
+  transition: all 0.2s ease;
+  width: 444px;
+}
+
+.admin-menu .spawn-vehicle-i7567 {
+  height: 32px;
+  left: 10px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 461px;
+}
+
+.admin-menu .i756717 {
+  height: 22px;
+  left: 410px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: -4px;
+  width: 21px;
+}
+
+.admin-menu .spawncomp-8 {
+  background-color: var(--mist-gray);
+  border-radius: 1px;
+  height: 32px;
+  left: 71px;
+  pointer-events: auto;
+  position: absolute;
+  top: 373px;
+  transition: all 0.2s ease;
+  width: 444px;
+}
+
+.admin-menu .spawn-vehicle-i7617 {
+  height: 32px;
+  left: 10px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 461px;
+}
+
+.admin-menu .i761717 {
+  height: 22px;
+  left: 410px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: -4px;
+  width: 21px;
+}
+
+.admin-menu .spawncomp-9 {
+  background-color: var(--mist-gray);
+  border-radius: 1px;
+  height: 33px;
+  left: 71px;
+  pointer-events: auto;
+  position: absolute;
+  top: 410px;
+  transition: all 0.2s ease;
+  width: 444px;
+}
+
+.admin-menu .spawn-vehicle-i7667 {
+  height: 33px;
+  left: 10px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 461px;
+}
+
+.admin-menu .i766717 {
+  height: 23px;
+  left: 410px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: -4px;
+  width: 21px;
+}
+
+.admin-menu .spawncomp-10 {
+  background-color: var(--mist-gray);
+  border-radius: 1px;
+  height: 33px;
+  left: 71px;
+  pointer-events: auto;
+  position: absolute;
+  top: 447px;
+  transition: all 0.2s ease;
+  width: 444px;
+}
+
+.admin-menu .spawn-vehicle-i7717 {
+  height: 33px;
+  left: 10px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 461px;
+}
+
+.admin-menu .i771717 {
+  height: 23px;
+  left: 458px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 5px;
+  width: 21px;
+}
+
+.admin-menu .spawncomp-11 {
+  background-color: var(--mist-gray);
+  border-radius: 1px;
+  height: 33px;
+  left: 71px;
+  pointer-events: auto;
+  position: absolute;
+  top: 484px;
+  transition: all 0.2s ease;
+  width: 444px;
+}
+
+.admin-menu .spawn-vehicle-i7767 {
+  height: 33px;
+  left: 10px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 461px;
+}
+
+.admin-menu .i776717 {
+  height: 23px;
+  left: 410px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: -4px;
+  width: 21px;
+}
+
+.admin-menu .spawncomp-12 {
+  background-color: var(--mist-gray);
+  border-radius: 1px;
+  height: 33px;
+  left: 71px;
+  pointer-events: auto;
+  position: absolute;
+  top: 521px;
+  transition: all 0.2s ease;
+  width: 444px;
+}
+
+.admin-menu .spawn-vehicle-i7817 {
+  height: 33px;
+  left: 10px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 461px;
+}
+
+.admin-menu .i781717 {
+  height: 23px;
+  left: 410px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: -4px;
+  width: 21px;
+}
+
+.admin-menu .spawncomp-13 {
+  background-color: var(--mist-gray);
+  border-radius: 1px;
+  height: 32px;
+  left: 71px;
+  pointer-events: auto;
+  position: absolute;
+  top: 559px;
+  transition: all 0.2s ease;
+  width: 444px;
+}
+
+.admin-menu .spawn-vehicle-i7867 {
+  height: 32px;
+  left: 10px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 461px;
+}
+
+.admin-menu .i786717 {
+  height: 22px;
+  left: 410px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: -4px;
+  width: 21px;
+}
+
+.admin-menu .spawncomp-14 {
+  background-color: var(--mist-gray);
+  border-radius: 1px;
+  height: 32px;
+  left: 71px;
+  pointer-events: auto;
+  position: absolute;
+  top: 596px;
+  transition: all 0.2s ease;
+  width: 444px;
+}
+
+.admin-menu .spawn-vehicle-i7917 {
+  height: 32px;
+  left: 10px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 461px;
+}
+
+.admin-menu .i791717 {
+  height: 22px;
+  left: 410px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: -4px;
+  width: 21px;
+}
+
+.admin-menu .spawncomp-15 {
+  background-color: var(--mist-gray);
+  border-radius: 1px;
+  height: 32px;
+  left: 71px;
+  pointer-events: auto;
+  position: absolute;
+  top: 633px;
+  transition: all 0.2s ease;
+  width: 444px;
+}
+
+.admin-menu .spawn-vehicle-i7967 {
+  height: 32px;
+  left: 10px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 461px;
+}
+
+.admin-menu .i796717 {
+  height: 22px;
+  left: 410px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: -4px;
+  width: 21px;
+}
+
+.admin-menu .spawncomp-16 {
+  background-color: var(--mist-gray);
+  border-radius: 1px;
+  height: 33px;
+  left: 71px;
+  pointer-events: auto;
+  position: absolute;
+  top: 670px;
+  transition: all 0.2s ease;
+  width: 444px;
+}
+
+.admin-menu .spawn-vehicle-i7101 {
+  height: 33px;
+  left: 10px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 461px;
+}
+
+.admin-menu .i7101717 {
+  height: 23px;
+  left: 410px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: -4px;
+  width: 21px;
+}
+
+.admin-menu .spawncomp-17 {
+  background-color: var(--mist-gray);
+  border-radius: 1px;
+  height: 33px;
+  left: 71px;
+  pointer-events: auto;
+  position: absolute;
+  top: 707px;
+  transition: all 0.2s ease;
+  width: 444px;
+}
+
+.admin-menu .spawn-vehicle-i7106 {
+  height: 33px;
+  left: 10px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 461px;
+}
+
+.admin-menu .i7106717 {
+  height: 23px;
+  left: 410px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: -4px;
+  width: 21px;
+}
+
+.admin-menu .spawncomp-18 {
+  background-color: var(--mist-gray);
+  border-radius: 1px;
+  height: 33px;
+  left: 71px;
+  pointer-events: auto;
+  position: absolute;
+  top: 744px;
+  transition: all 0.2s ease;
+  width: 444px;
+}
+
+.admin-menu .spawn-vehicle-i7111 {
+  height: 33px;
+  left: 10px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 461px;
+}
+
+.admin-menu .i7111717 {
+  height: 23px;
+  left: 410px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: -4px;
+  width: 21px;
+}
+
+.admin-menu .spawncomp-19 {
+  /* background-color: var(--mist-gray); */
+  border-radius: 1px;
+  height: 40px;
+  left: 21px;
+  pointer-events: auto;
+  position: absolute;
+  top: 880px;
+  transition: all 0.2s ease;
+  width: 40px;
+}
+
+.admin-menu .spawn-vehicle-i7116 {
+  height: 33px;
+  left: 10px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 461px;
+}
+
+.admin-menu .i7116717 {
+  height: 23px;
+  left: 410px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: -4px;
+  width: 21px;
+}
+
+.admin-menu .spawncomp-20 {
+  background-color: var(--mist-gray);
+  border-radius: 1px;
+  height: 32px;
+  left: 71px;
+  pointer-events: auto;
+  position: absolute;
+  top: 745px;
+  transition: all 0.2s ease;
+  width: 444px;
+}
+
+.admin-menu .spawncomp-21 {
+  background-color: var(--mist-gray);
+  border-radius: 1px;
+  height: 32px;
+  left: 71px;
+  pointer-events: auto;
+  position: absolute;
+  top: 783px;
+  transition: all 0.2s ease;
+  width: 444px;
+}
+
+.admin-menu .spawncomp-22 {
+  background-color: var(--mist-gray);
+  border-radius: 1px;
+  height: 32px;
+  left: 71px;
+  pointer-events: auto;
+  position: absolute;
+  top: 821px;
+  transition: all 0.2s ease;
+  width: 444px;
+}
+
+.admin-menu .spawn-vehicle-i7121 {
+  height: 32px;
+  left: 10px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 461px;
+}
+
+.admin-menu .spawn-vehicle-i7122 {
+  height: 32px;
+  left: 10px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 461px;
+}
+
+.admin-menu .spawn-vehicle-i7123 {
+  height: 32px;
+  left: 10px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 461px;
+}
+
+.admin-menu .i7121717 {
+  height: 22px;
+  left: 410px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: -4px;
+  width: 21px;
+}
+
+.admin-menu .i7122717 {
+  height: 22px;
+  left: 410px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: -4px;
+  width: 21px;
+}
+
+.admin-menu .i7122718 {
+  height: 22px;
+  left: 410px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: -4px;
+  width: 21px;
+}
+
+.admin-menu .component-1 {
+  align-items: flex-start;
+  border-radius: 1px;
+  display: flex;
+  flex-direction: column;
+  left: 15px;
+  min-height: 8px;
+  position: absolute;
+  top: 883px;
+  width: 528px;
+}
+
+.admin-menu .text-5 {
+  color: #ffffff;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-s);
+  font-weight: 700;
+  height: 8px;
+  letter-spacing: 0;
+  margin-left: -6.32px;
+  margin-top: -13px;
+  text-align: center;
+  width: 529px;
+}
+
+.admin-menu .rectangle-6-1 {
+  height: 8px;
+  margin-left: -0.33px;
+  margin-top: 5px;
+  width: 516px;
+}
+
+/* Evan Shit */
+
+.admin-menu .spawncomp-1:hover {
+  background-color: rgba(114, 114, 114, 0.432);
+}
+
+.admin-menu .spawncomp-2:hover {
+  background-color: rgba(114, 114, 114, 0.432);
+}
+
+.admin-menu .spawncomp-3:hover {
+  background-color: rgba(114, 114, 114, 0.432);
+}
+
+.admin-menu .spawncomp-4:hover {
+  background-color: rgba(114, 114, 114, 0.432);
+}
+
+.admin-menu .spawncomp-5:hover {
+  background-color: rgba(114, 114, 114, 0.432);
+}
+
+.admin-menu .spawncomp-6:hover {
+  background-color: rgba(114, 114, 114, 0.432);
+}
+
+.admin-menu .spawncomp-7:hover {
+  background-color: rgba(114, 114, 114, 0.432);
+}
+
+.admin-menu .spawncomp-8:hover {
+  background-color: rgba(114, 114, 114, 0.432);
+}
+
+.admin-menu .spawncomp-9:hover {
+  background-color: rgba(114, 114, 114, 0.432);
+}
+
+.admin-menu .spawncomp-10:hover {
+  background-color: rgba(114, 114, 114, 0.432);
+}
+
+.admin-menu .spawncomp-11:hover {
+  background-color: rgba(114, 114, 114, 0.432);
+}
+
+.admin-menu .spawncomp-12:hover {
+  background-color: rgba(114, 114, 114, 0.432);
+}
+
+.admin-menu .spawncomp-13:hover {
+  background-color: rgba(114, 114, 114, 0.432);
+}
+
+.admin-menu .spawncomp-14:hover {
+  background-color: rgba(114, 114, 114, 0.432);
+}
+
+.admin-menu .spawncomp-15:hover {
+  background-color: rgba(114, 114, 114, 0.432);
+}
+
+.admin-menu .spawncomp-16:hover {
+  background-color: rgba(114, 114, 114, 0.432);
+}
+
+.admin-menu .spawncomp-17:hover {
+  background-color: rgba(114, 114, 114, 0.432);
+}
+
+.admin-menu .spawncomp-18:hover {
+  background-color: rgba(114, 114, 114, 0.432);
+}
+
+.admin-menu .spawncomp-19:hover {
+  background-color: rgba(114, 114, 114, 0.432);
+}
+
+.admin-menu .spawncomp-20:hover {
+  background-color: rgba(114, 114, 114, 0.432);
+}
+
+.admin-menu .spawncomp-21:hover {
+  background-color: rgba(114, 114, 114, 0.432);
+}
+
+.admin-menu .spawncomp-22:hover {
+  background-color: rgba(114, 114, 114, 0.432);
+}
+
+.admin-menu .spawncomp:hover {
+  background-color: rgba(114, 114, 114, 0.432);
+}
+
+.admin-menu .bennyscomp:hover {
+  background-color: rgba(114, 114, 114, 0.432);
+}
