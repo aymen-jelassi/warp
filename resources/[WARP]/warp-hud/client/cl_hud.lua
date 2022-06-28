@@ -81,7 +81,7 @@ AddEventHandler('healthregen', function()
   SetPlayerHealthRechargeLimit(pId, 2.0)
   regentime = math.random(2699, 2700)
 
-  
+
   local ped = PlayerPedId()
   local pId = PlayerId()
   local loops = 0
@@ -107,7 +107,7 @@ AddEventHandler('armorbuff', function()
   SetPlayerMaxArmour(pId, 1.5)
   armortime = math.random(2699, 2700)
 
-  
+
   local ped = PlayerPedId()
   local pId = PlayerId()
   local loops = 0
@@ -133,7 +133,7 @@ AddEventHandler('hungerbuff', function()
   hungertime = math.random(2699, 2700)
   isHungerBuff = 1
 
-  
+
   local ped = PlayerPedId()
   local pId = PlayerId()
   local loops = 0
@@ -157,7 +157,7 @@ AddEventHandler('thirstbuff', function()
   buffthirsttime = math.random(2699, 2700)
   isThirstBuff = 1
 
-  
+
   local ped = PlayerPedId()
   local pId = PlayerId()
   local loops = 0
@@ -181,7 +181,7 @@ AddEventHandler('stressbuff', function()
   stresstime = math.random(2699, 2700)
   isStressBuff = 1
 
-  
+
   local ped = PlayerPedId()
   local pId = PlayerId()
   local loops = 0
@@ -205,13 +205,11 @@ end)
 
 -- buffs start
 
-RegisterNetEvent('luckevent') -- done 
+RegisterNetEvent('luckevent') -- done
 AddEventHandler('luckevent', function()
   if bufftimeluck > 0 then return end
   bufftimeluck = math.random(10, 100)
   isLuckBuff = 1
-
-
   local ped = PlayerPedId()
   local pId = PlayerId()
   local loops = 0
@@ -235,7 +233,7 @@ AddEventHandler('swimbuffevent', function()
   if bufftimeswimming > 0 then return end
   SetSwimMultiplierForPlayer(pId, 2.0)
   bufftimeswimming = math.random(10, 55)
-  
+
   local ped = PlayerPedId()
   local pId = PlayerId()
   local loops = 0
@@ -258,10 +256,10 @@ end)
 RegisterNetEvent('strongevent')
 AddEventHandler('strongevent', function()
   if buffstrenthtime > 0 then return end
-  SetPlayerMeleeWeaponDamageModifier(pId, 1.25)
+  SetPlayerMeleeWeponDamageModifier(pId, 1.25)
   SetPlayerMeleeWeaponDefenseModifier(pId, 1.25)
   buffstrenthtime = math.random(10, 75)
-  
+
   local ped = PlayerPedId()
   local pId = PlayerId()
   local loops = 0
@@ -289,7 +287,7 @@ AddEventHandler('intelevent', function()
   if bufftimeint > 0 then return end
   bufftimeint = math.random(10, 75)
   isIntelBuff = 1
-  
+
   local ped = PlayerPedId()
   local pId = PlayerId()
   local loops = 0
@@ -323,7 +321,7 @@ AddEventHandler('specialring', function()
   SetPlayerMeleeWeaponDamageModifier(pId, 1.25)
   SetPlayerMeleeWeaponDefenseModifier(pId, 1.25)
   buffstrenthtime = math.random(99, 100)
-  
+
   local ped = PlayerPedId()
   local pId = PlayerId()
   local loops = 0
@@ -345,7 +343,7 @@ AddEventHandler('specialring', function()
   SetPlayerMeleeWeaponDefenseModifier(pId, 1.0)
 end)
 
-RegisterNetEvent('luckeventring')     
+RegisterNetEvent('luckeventring')
 AddEventHandler('luckeventring', function()
   if bufftimeluck > 0 then return end
   bufftimeluck = math.random(99, 100)
@@ -374,7 +372,7 @@ AddEventHandler('swimbuffring', function()
   if bufftimeswimming > 0 then return end
   SetSwimMultiplierForPlayer(pId, 2.0)
   bufftimeswimming = math.random(99, 100)
-  
+
   local ped = PlayerPedId()
   local pId = PlayerId()
   local loops = 0
@@ -401,7 +399,7 @@ AddEventHandler('hadsugar', function()
   SetRunSprintMultiplierForPlayer(PlayerId(), 1.05)
   SetSwimMultiplierForPlayer(pId, 1.05)
   drugEffectTime = 20
-  
+
   local ped = PlayerPedId()
   local pId = PlayerId()
   local loops = 0
@@ -432,7 +430,7 @@ AddEventHandler('hadcocaine', function()
   drugEffectTime = 60
 
   TriggerEvent("client:newStress", true, math.random(10, 50))
-  
+
   local ped = PlayerPedId()
   local pId = PlayerId()
   local loops = 0
@@ -645,7 +643,7 @@ AddEventHandler('hadcrack', function()
 
   TriggerEvent("client:newStress", true, 10)
   TriggerEvent("healed:useOxy", false, true)
-  
+
   local ped = PlayerPedId()
   local pId = PlayerId()
   local loops = 0
@@ -760,7 +758,7 @@ CreateThread(function()
 end)
 
 local lastDamageTrigger = 0
-  
+
 currentValues["oxy"] = 25
 
 RegisterNetEvent("RemoveOxyTank")
@@ -841,7 +839,7 @@ function roundedRadar()
         DisplayRadar(0)
         SetRadarBigmapEnabled(true, false)
         Citizen.Wait(0)
-        SetRadarBigmapEnabled(false, false) 
+        SetRadarBigmapEnabled(false, false)
         return
     end
     Citizen.CreateThread(function()
@@ -981,7 +979,7 @@ Citizen.CreateThread(function()
 
         HudWeaponWheelIgnoreSelection()  -- CAN'T SELECT WEAPON FROM SCROLL WHEEL
         DisableControlAction(0, 37, true)
-        
+
         HideMinimapInteriorMapThisFrame()
         SetRadarZoom(1000)
 
@@ -995,7 +993,7 @@ Citizen.CreateThread(function()
       InvalidateIdleCam()
       N_0x9e4cfff989258472() -- Disable the vehicle idle camera
       Wait(10000) --The idle camera activates after 30 second so we don't need to call this per frame
-    end 
+    end
 end)
 
 --minimap stuff
@@ -1092,7 +1090,7 @@ end
 end
   TriggerServerEvent("police:update:hud",GetEntityHealth(PlayerPedId()),GetPedArmour(PlayerPedId()),currentValues["thirst"],currentValues["hunger"])
 Citizen.Wait(300000)
-		
+
 		if currentValues["thirst"] < 20 or currentValues["hunger"] < 20 then
 			local newhealth = GetEntityHealth(PlayerPedId()) - math.random(10)
 			SetEntityHealth(PlayerPedId(), newhealth)
@@ -1149,7 +1147,7 @@ AddEventHandler("police:setClientMeta",function(meta)
 		SetEntityHealth(PlayerPedId(),meta.health)
 	end
 
-	
+
 	SetPlayerMaxArmour(PlayerPedId(), 60 )
 	SetPedArmour(PlayerPedId(),meta.armour)
 end)
@@ -1159,7 +1157,7 @@ Citizen.CreateThread(function ()
 		local isTalking = NetworkIsPlayerTalking(PlayerId())
         local pRadioActive = exports['warp-voice']:pRadioActive()
         SendNUIMessage({
-            action = "voiceupdate", 
+            action = "voiceupdate",
             talking = NetworkIsPlayerTalking(PlayerId()) and not pRadioActive,
             radioPush = pRadioActive,
         })
@@ -1169,7 +1167,7 @@ end)
 
 Citizen.CreateThread(function()
     voice = 2
-    while true do 
+    while true do
         Citizen.Wait(500)
         if isLoggedIn then
             local playerPed = PlayerPedId()
@@ -1181,11 +1179,11 @@ Citizen.CreateThread(function()
             local get_ped = PlayerPedId()
             currentValues["armor"] = GetPedArmour(get_ped)
 
-            if pStress < 0 then 
+            if pStress < 0 then
                 pStress = 0
             end
 
-            if pStress > 100 then 
+            if pStress > 100 then
                 pStress = 100
             end
 
@@ -1200,11 +1198,11 @@ Citizen.CreateThread(function()
 
             if currentValues["health"] < 1 then currentValues["health"] = 100 end
             if currentValues["thirst"] > 100 then currentValues["thirst"] = 100 end
-        
-                
+
+
             if oxy < 0 then oxy = 0 end
 
-            if IsPedInAnyVehicle(PlayerPedId(), true) and not IsPauseMenuActive() then 
+            if IsPedInAnyVehicle(PlayerPedId(), true) and not IsPauseMenuActive() then
                 local vehhash = GetEntityModel(playerVeh)
                 local maxspeed = GetVehicleModelMaxSpeed(vehhash) * 3.6
                 SendNUIMessage({action = "ShowCarHud", showCarUi = true})
@@ -1252,9 +1250,9 @@ Citizen.CreateThread(function()
                 alert = alerttime,
 			        	hasbuffthirst = buffthirsttime,
                 hasregenfood = hungertime
-                
+
             })
-        else 
+        else
             SendNUIMessage({action = "ShowCarHud", showCarUi = false})
             SendNUIMessage({action = "hudtick", show = "none"})
         end
@@ -1465,7 +1463,7 @@ Citizen.CreateThread(function()
                     updateLatestVehicle = veh
                     setLastUpdate = 0
 
-                    --if not DecorExistOn(veh, "GetVehicleCurrentFuel") then 
+                    --if not DecorExistOn(veh, "GetVehicleCurrentFuel") then
                     --    Fuel = math.random(80,100)
                     --    DecorSetInt(veh, "GetVehicleCurrentFuel", fRound(Fuel))
                     --end
@@ -1474,7 +1472,7 @@ Citizen.CreateThread(function()
 
                     if Fuel > 105 then
                         Fuel = exports["warp-vehicles"]:CurrentFuel()
-                    end                     
+                    end
                     if Fuel == 101 then
                         Fuel = exports["warp-vehicles"]:CurrentFuel()
                     end
@@ -1621,7 +1619,7 @@ AddEventHandler('warp-gas:checkpump', function()
 	local vehicleCoords = GetEntityCoords(vehicle)
     local veh = getVehicleClosestToMe()
 
-    TriggerEvent('customNotification', "Make sure you are facing the vehicle!") 
+    TriggerEvent('customNotification', "Make sure you are facing the vehicle!")
     TaskTurnPedToFaceEntity(ped, vehicle, 1000)
     Wait(1600)
     if DoesEntityExist(veh) and IsEntityAVehicle(veh) and #(GetEntityCoords(veh) - GetEntityCoords(PlayerPedId())) < 5.0 then
@@ -1632,7 +1630,7 @@ AddEventHandler('warp-gas:checkpump', function()
         end
         if vehicleCurrentFuel >= 100 then
             PlaySound(-1, "5_Second_Timer", "DLC_HEISTS_GENERAL_FRONTEND_SOUNDS", 0, 0, 1)
-            TriggerEvent('customNotification', "You are already full!") 
+            TriggerEvent('customNotification', "You are already full!")
         else
             costs = math.ceil(costs)
             TriggerServerEvent("carfill:checkmoney", costs)
@@ -1658,16 +1656,16 @@ function getVehicleInDirection(coordFrom, coordTo)
 	local vehicle
 
 	for i = 0, 100 do
-		rayHandle = CastRayPointToPoint(coordFrom.x, coordFrom.y, coordFrom.z, coordTo.x, coordTo.y, coordTo.z + offset, 10, PlayerPedId(), 0)	
+		rayHandle = CastRayPointToPoint(coordFrom.x, coordFrom.y, coordFrom.z, coordTo.x, coordTo.y, coordTo.z + offset, 10, PlayerPedId(), 0)
 		a, b, c, d, vehicle = GetRaycastResult(rayHandle)
-		
+
 		offset = offset - 1
 
 		if vehicle ~= 0 then break end
 	end
-	
+
 	local distance = Vdist2(coordFrom, GetEntityCoords(vehicle))
-	
+
 	if distance > 3000 then vehicle = nil end
 
     return vehicle ~= nil and vehicle or 0
@@ -1685,7 +1683,7 @@ AddEventHandler("RefuelCarServerReturn",function()
     else
 
         local vehicleCurrentFuel = DecorGetInt(veh, "GetVehicleCurrentFuel")
-        local endFuel = (100 - vehicleCurrentFuel) 
+        local endFuel = (100 - vehicleCurrentFuel)
         endFuel = math.ceil(endFuel * (finished / 100) + vehicleCurrentFuel)
         DecorSetInt(veh, "GetVehicleCurrentFuel", endFuel)
 
@@ -1695,7 +1693,7 @@ end)
 
 function refillVehicle()
     ClewarpedSecondaryTask(PlayerPedId())
-    loadAnimDict( "weapon@w_sp_jerrycan" ) 
+    loadAnimDict( "weapon@w_sp_jerrycan" )
     TaskPlayAnim( PlayerPedId(), "weapon@w_sp_jerrycan", "fire", 8.0, 1.0, -1, 1, 0, 0, 0, 0 )
 end
 
@@ -1716,9 +1714,9 @@ end
 RegisterNetEvent('warp-admin:maxstats')
 AddEventHandler('warp-admin:maxstats', function()
     currentValues["thirst"] = 100
-	currentValues["hunger"] = 100 
+	currentValues["hunger"] = 100
     TriggerEvent("heal", PlayerPedId())
-    TriggerEvent("Hospital:HealInjuries", PlayerPedId(),true) 
+    TriggerEvent("Hospital:HealInjuries", PlayerPedId(),true)
     TriggerServerEvent("warp-death:reviveSV", source)
     TriggerServerEvent("reviveGranted", source)
     TriggerServerEvent("ems:healplayer", source)
@@ -1806,11 +1804,11 @@ Citizen.CreateThread( function()
 
 	local resetcounter = 0
 	local jumpDisabled = false
-  	
-  	while true do 
+
+  	while true do
     Citizen.Wait(100)
 		if jumpDisabled and resetcounter > 0 and IsPedJumping(PlayerPedId()) then
-			
+
 			SetPedToRagdoll(PlayerPedId(), 1000, 1000, 3, 0, 0, 0)
 
 			resetcounter = 0
@@ -1893,7 +1891,7 @@ function removeAttachedProp2()
         refillVehicle()
         local finished = exports["warp-taskbar"]:taskBar(timer,"Refueling")
         local veh = getVehicleClosestToMe()
-    
+
         if finished == 100 then
             if exports['warp-inventory']:hasEnoughOfItem('883325847', 1) then
                 --DecorSetInt(veh, "GetVehicleCurrentFuel", 100)
@@ -1902,13 +1900,13 @@ function removeAttachedProp2()
             else
                 TriggerEvent('DoLongHudText', 'Try again!', 2)
             end
-    
+
             local vehicleCurrentFuel = exports["warp-vehicles"]:CurrentFuel(veh) --DecorGetInt(veh, "GetVehicleCurrentFuel")
-            local endFuel = (100 - vehicleCurrentFuel) 
+            local endFuel = (100 - vehicleCurrentFuel)
             endFuel = math.ceil(endFuel * (finished / 100) + vehicleCurrentFuel)
             --DecorSetInt(veh, "GetVehicleCurrentFuel", endFuel)
             exports["warp-vehicles"]:SetVehicleFuel(veh, endFuel)
-    
+
         end
         endanimation()
     else
@@ -1983,7 +1981,7 @@ AddEventHandler('warp-hud:showseatbelt', function()  -- this for harness ~ nicx
 end)
 
 
-  
+
 RegisterNetEvent("client:newStress")
 AddEventHandler("client:newStress", function(status, amount)
     local actualamount = amount/10
@@ -2028,7 +2026,7 @@ Citizen.CreateThread(function()
                 Wait(100)
                 TriggerScreenblurFadeOut(1000.0)
             end
-        end 
+        end
         Citizen.Wait(2000)
     end
 end)
@@ -2046,13 +2044,13 @@ Citizen.CreateThread(function()
         local player = PlayerPedId()
         if IsPedInAnyVehicle(player, false) then
             local veh = GetVehiclePedIsIn(player, false)
-            if IsVehicleEngineOn(veh) then          
+            if IsVehicleEngineOn(veh) then
 
                 if not uiopen then
                     uiopen = true
                     SendNUIMessage({
                     open = 1,
-                    }) 
+                    })
                 end
 
                 Mph = math.ceil(GetEntitySpeed(veh) * 2.236936)
@@ -2076,7 +2074,7 @@ Citizen.CreateThread(function()
                 if uiopen then
                     SendNUIMessage({
                     open = 3,
-                    }) 
+                    })
 
                     uiopen = false
                 end
@@ -2085,7 +2083,7 @@ Citizen.CreateThread(function()
             if uiopen then
                 SendNUIMessage({
                 open = 3,
-                }) 
+                })
 
                 uiopen = false
             end
