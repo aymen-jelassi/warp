@@ -1,7 +1,7 @@
 local fixingvehicle = false
 local justUsed = false
 local itemsUsedRecently = 0
-local lastCounter = 0 
+local lastCounter = 0
 local HeadBone = 0x796e;
 
 local WheelChairDown = false
@@ -139,7 +139,7 @@ AddEventHandler('RunUseItem', function(itemid, slot, inventoryName, isWeapon, it
     justUsed = true
 
     if (not hasEnoughOfItem(itemid,1,false)) then
-        TriggerEvent("DoLongHudText","You dont appear to have this item on you?",2) 
+        TriggerEvent("DoLongHudText","You dont appear to have this item on you?",2)
         justUsed = false
         itemsUsedRecently = 0
         lastCounter = 0
@@ -163,7 +163,7 @@ AddEventHandler('RunUseItem', function(itemid, slot, inventoryName, isWeapon, it
             local plyCoord = GetEntityCoords(PlayerPedId())
 
             Citizen.InvokeNative(0xEA386986E786A54F, Citizen.PointerValueIntInitialized(veh))
-            
+
             RequestModel('npwheelchair')
             while not HasModelLoaded('npwheelchair') do
                 Citizen.Wait(0)
@@ -178,7 +178,7 @@ AddEventHandler('RunUseItem', function(itemid, slot, inventoryName, isWeapon, it
             SetNetworkIdCanMigrate(id, true)
             Citizen.InvokeNative(0x629BFA74418D6239,Citizen.PointerValueIntInitialized(personalvehicle))
             TaskWarpPedIntoVehicle(PlayerPedId(),personalvehicle,-1)
-            SetEntityVisible(ped,true)			
+            SetEntityVisible(ped,true)
             TriggerEvent("keys:addNew",personalvehicle, plate)
         else
             WheelChairDown = false
@@ -212,7 +212,7 @@ AddEventHandler('RunUseItem', function(itemid, slot, inventoryName, isWeapon, it
             TriggerEvent("server-inventory-open", "1", "bentobox-"..ItemInfo.id)
         end
     end
-    
+
     function getItemsOfType(itemid, limitAmount, checkQuality, metaInformation)
         if itemid == nil then
             return nil
@@ -223,7 +223,7 @@ AddEventHandler('RunUseItem', function(itemid, slot, inventoryName, isWeapon, it
             if amount and #itemsFound >= amount then
                 break
             end
-    
+
             local qCheck = not checkQuality or v.quality > 0
             if v.item_id == itemid and qCheck then
                 if metaInformation then
@@ -285,7 +285,7 @@ AddEventHandler('RunUseItem', function(itemid, slot, inventoryName, isWeapon, it
         TriggerEvent('warp-meth:place_table')
     end
 
-    if itemid == "detcord" then 
+    if itemid == "detcord" then
         TriggerEvent('test:123')
     end
 
@@ -357,7 +357,7 @@ AddEventHandler('RunUseItem', function(itemid, slot, inventoryName, isWeapon, it
     if (itemid == "cane") then
         TriggerEvent('attach:cane')
     end
-    
+
     if (itemid == "fakeplate") then
       TriggerEvent("fakeplate:accepted")
     end
@@ -378,7 +378,7 @@ AddEventHandler('RunUseItem', function(itemid, slot, inventoryName, isWeapon, it
 
     if (itemid == "thermal_charge") then
         TriggerEvent('warp-bobcat:firstdoor')
-        TriggerEvent('warp-vault:firstdoor')  
+        TriggerEvent('warp-vault:firstdoor')
         TriggerEvent('warp-vault:lowerfirstdoor')
         TriggerEvent('warp-vault:lowerseconddoor')
         TriggerEvent('warp-vault:seconddoor')
@@ -386,7 +386,7 @@ AddEventHandler('RunUseItem', function(itemid, slot, inventoryName, isWeapon, it
         TriggerEvent('warp-heists:door_thermite')
         TriggerEvent('warp-heists:2nd_door_thermite')
         TriggerEvent('warp-paleto:box')
-    end  
+    end
 
     if (itemid == "huntingbait") then
         TriggerEvent('warp-hunting:usedBait')
@@ -408,7 +408,7 @@ AddEventHandler('RunUseItem', function(itemid, slot, inventoryName, isWeapon, it
     end
 
 
-    
+
     if itemid == "murdermeal" then
         local finished = exports['warp-taskbar']:taskBar(1000, 'Unwrapping')
         local cid = exports["isPed"]:isPed("cid")
@@ -417,7 +417,7 @@ AddEventHandler('RunUseItem', function(itemid, slot, inventoryName, isWeapon, it
             TriggerEvent("server-inventory-open", "1", "murdermeal-"..ItemInfo.id)
         end
     end
-    
+
     if (itemid == "DuffelBag") then
         local finished = exports['warp-taskbar']:taskBar(2000, 'Opening Duffel Bag')
         local cid = exports["isPed"]:isPed("cid")
@@ -426,7 +426,7 @@ AddEventHandler('RunUseItem', function(itemid, slot, inventoryName, isWeapon, it
             TriggerEvent("server-inventory-open", "1", "duffelbag-"..ItemInfo.id)
         end
     end
-    
+
     if (itemid == "present") then
         local finished = exports["warp-taskbar"]:taskBar(4000,"Opening Present",false,false,playerVeh)
         if (finished == 100) then
@@ -439,7 +439,7 @@ AddEventHandler('RunUseItem', function(itemid, slot, inventoryName, isWeapon, it
             TriggerEvent("player:receiveItem", "milkshake", 1)
         end
     end
-    
+
 
     if (itemid == "nightvision") then
         TriggerEvent('nightvision:toggle')
@@ -465,7 +465,7 @@ AddEventHandler('RunUseItem', function(itemid, slot, inventoryName, isWeapon, it
         local itemInfo = GetItemInfo(slot)
         local data = itemInfo.information
         if data == '{}' then
-            TriggerEvent("DoLongHudText","Start collecting evidence!",1) 
+            TriggerEvent("DoLongHudText","Start collecting evidence!",1)
             TriggerEvent("inventory:updateItem", itemid, slot, '{"used": "true"}')
             --
         else
@@ -517,7 +517,7 @@ AddEventHandler('RunUseItem', function(itemid, slot, inventoryName, isWeapon, it
             TriggerEvent("pixerium:check",3,"robbery:decrypt3",true)
           end
       end
-      
+
     end
 
     if (itemid == "pix1") then
@@ -528,7 +528,7 @@ AddEventHandler('RunUseItem', function(itemid, slot, inventoryName, isWeapon, it
             remove = true
           end
       end
-    end  
+    end
 
     if (itemid == "pix2") then
       if (#(GetEntityCoords(player) - vector3( 1275.49, -1710.39, 54.78)) < 3.0) then
@@ -564,7 +564,7 @@ AddEventHandler('RunUseItem', function(itemid, slot, inventoryName, isWeapon, it
     if (itemid == "key1") then
         TriggerEvent('warp-doors:container_1')
     end
-    
+
     if (itemid == "key2") then
         TriggerEvent('warp-doors:container_2')
     end
@@ -575,7 +575,7 @@ AddEventHandler('RunUseItem', function(itemid, slot, inventoryName, isWeapon, it
 
     if (itemid == "heistlaptop3") then
         TriggerEvent("warp-robbery:usb")
-        -- TriggerEvent("inventory:DegenLastUsedItem", 5)  
+        -- TriggerEvent("inventory:DegenLastUsedItem", 5)
     end
 
     if (itemid == "heistlaptop4") then
@@ -853,14 +853,14 @@ end
             end
         end
     end
-    
+
     if (itemid == "tea") then
         TriggerEvent("animation:PlayAnimation","drink")
         local finished = exports['warp-taskbar']:taskBar(6000, 'Drinking Tea')
         if finished == 100 then
-            if exports['warp-inventory']:hasEnoughOfItem('tea', 1) then 
+            if exports['warp-inventory']:hasEnoughOfItem('tea', 1) then
                 TriggerEvent('warp-hud:ChangeThirst', 55)
-                TriggerEvent('coffee:drink') 
+                TriggerEvent('coffee:drink')
                 remove = true
             else
                 TriggerEvent('destroyProp')
@@ -904,7 +904,7 @@ end
             TriggerEvent("destroyProp")
         end
     end
-    
+
     if (itemid == "chocobar") then
         TriggerEvent("animation:PlayAnimation","eat")
         TriggerEvent("attachItem", itemid)
@@ -968,7 +968,7 @@ end
             if exports['warp-inventory']:hasEnoughOfItem('churro', 1) or exports['warp-inventory']:hasEnoughOfItem('hotdog', 1) then
                 TriggerEvent("destroyProp")
                 TriggerEvent('warp-hud:ChangeHunger', 30)
-                TriggerEvent('food:Condiment') 
+                TriggerEvent('food:Condiment')
                 remove = true
             else
                 TriggerEvent('destroyProp')
@@ -1040,7 +1040,7 @@ end
     end
 
     if (itemid == "usbdevice") then
-         TriggerEvent('warp-blackmarket:open')  
+         TriggerEvent('warp-blackmarket:open')
     end
 
     if (itemid == "weed12oz") then
@@ -1201,7 +1201,7 @@ end
             local finished = exports["warp-taskbar"]:taskBar(20000,"Fixing tires",false,false,playerVeh)
             if (finished == 100) then
                 for i = 0, 5 do
-                    SetVehicleTyreFixed(targetVehicle, i) 
+                    SetVehicleTyreFixed(targetVehicle, i)
                     TriggerEvent('veh.randomDegredation',10,targetVehicle,3)
                     ClearPedTasks(playerped)
                     FreezeEntityPosition(playerped, false)
@@ -1313,7 +1313,7 @@ end
             local finished = exports["warp-taskbar"]:taskBar(10000,"Opening bank box.",false,false,playerVeh)
             if (finished == 100) then
                 remove = true
-                TriggerEvent("inventory:removeItem","locksystem", 1)  
+                TriggerEvent("inventory:removeItem","locksystem", 1)
 
                 TriggerServerEvent('loot:useItem', itemid)
             end
@@ -1327,7 +1327,7 @@ end
             local finished = exports["warp-taskbar"]:taskBar(5000,"Opening briefcase.",false,false,playerVeh)
             if (finished == 100) then
                 remove = true
-                TriggerEvent("inventory:removeItem","Bankboxkey", 1)  
+                TriggerEvent("inventory:removeItem","Bankboxkey", 1)
 
                 TriggerServerEvent('loot:useItem', itemid)
             end
@@ -1348,7 +1348,7 @@ end
         end
     end
 
-    if (itemid == "binoculars") then 
+    if (itemid == "binoculars") then
         TriggerEvent("binoculars:Activate")
     end
 
@@ -1364,11 +1364,11 @@ end
         TriggerEvent("inv:lockPick",false,inventoryName,slot)
         TriggerEvent('dummie-check:boosting')
     end
-		
+
     if (itemid == "radio" or itemid == "emsradio" or itemid == "civradio") then
         TriggerEvent('radioGui')
     end
-		
+
     if (itemid == "umbrella") then
         TriggerEvent("animation:PlayAnimation","umbrella")
     end
@@ -1389,11 +1389,11 @@ end
 
     if (itemid =="advrepairkit") then
       TriggerEvent('veh:repairing',inventoryName,slot,itemid)
-           
+
     end
 
     if (itemid == "securityblue" or itemid == "securityblack" or itemid == "securitygreen" or itemid == "securitygold" or itemid == "securityred")  then
-        TriggerEvent("robbery:scanLock",false,itemid)       
+        TriggerEvent("robbery:scanLock",false,itemid)
     end
 
     if (itemid == "Gruppe6Card2")  then
@@ -1402,19 +1402,19 @@ end
 
     if (itemid == "Gruppe6Card222")  then
         TriggerServerEvent("robbery:triggerItemUsedServer",itemid)
-    end    
+    end
 
     if (itemid == "Gruppe6Card22")  then
         TriggerServerEvent("robbery:triggerItemUsedServer",itemid)
-    end 
-    
+    end
+
     if (itemid == "Largesupplycrate")  then
         local finished = exports["warp-taskbar"]:taskBar(30000,"Opening Crate",false,false,playerVeh)
         if (finished == 100) then
             TriggerEvent('player:receiveItem', 'propane', 300)
             TriggerEvent('player:receiveItem', 'sodiumhidroxide', 300)
         end
-    end 
+    end
 
     if (itemid == "Mediumsupplycrate")  then
         local finished = exports["warp-taskbar"]:taskBar(20000,"Opening Crate",false,false,playerVeh)
@@ -1422,7 +1422,7 @@ end
             TriggerEvent('player:receiveItem', 'propane', 200)
             TriggerEvent('player:receiveItem', 'sodiumhidroxide', 200)
         end
-    end 
+    end
 
     if (itemid == "Smallsupplycrate")  then
         local finished = exports["warp-taskbar"]:taskBar(10000,"Opening Crate",false,false,playerVeh)
@@ -1431,7 +1431,7 @@ end
             TriggerEvent('player:receiveItem', 'sodiumhidroxide', 100)
             remove = true
         end
-    end 
+    end
 
     if (itemid == "meth50g") then
         if exports['warp-inventory']:hasEnoughOfItem('drugbaggy', 25) then
@@ -1448,7 +1448,7 @@ end
         local finished = exports["warp-taskbar"]:taskBar(2000,"Lighting Up",false,false,playerVeh)
         if (finished == 100) then
             Wait(200)
-            TriggerEvent("animation:PlayAnimation","smoke")      
+            TriggerEvent("animation:PlayAnimation","smoke")
             TriggerEvent("stress:timed",600,"WORLD_HUMAN_SMOKING_POT")
             TriggerEvent("client:newStress",false, 40)
             remove = true
@@ -1460,7 +1460,7 @@ end
     if (itemid == "cigar") then
         if (finished == 100) then
             Wait(200)
-            TriggerEvent("animation:PlayAnimation","cigar")    
+            TriggerEvent("animation:PlayAnimation","cigar")
             TriggerEvent("stress:timed",600,"WORLD_HUMAN_SMOKING_POT")
             TriggerEvent("client:newStress",false, 30)
             remove = true
@@ -1471,7 +1471,7 @@ end
 
     if (itemid == "oxygentank") then
         local finished = exports["warp-taskbar"]:taskBar(30000,"Setting up oxygen gear",true,false,playerVeh)
-        if (finished == 100) then        
+        if (finished == 100) then
             TriggerEvent("UseOxygenTank")
             remove = true
         end
@@ -1514,12 +1514,12 @@ end
         end
     end
 
-    if (itemid == "idcard") then 
+    if (itemid == "idcard") then
         local ItemInfo = GetItemInfo(slot)
-        TriggerServerEvent("police:showID",ItemInfo.information)   
+        TriggerServerEvent("police:showID",ItemInfo.information)
     end
 
-    if (itemid == "drivingtest") then 
+    if (itemid == "drivingtest") then
         local ItemInfo = GetItemInfo(slot)
         if (ItemInfo.information ~= "No information stored") then
             local data = json.decode(ItemInfo.information)
@@ -1541,7 +1541,7 @@ end
         end
     end
 
-    if (itemid == "1gcrack") then 
+    if (itemid == "1gcrack") then
         local finished = exports["warp-ui"]:taskBarSkill(3000, math.random(15, 20))
         if (finished == 100 and hasEnoughOfItem(itemid, 1, false)) then
             TriggerEvent("attachItemObjectnoanim","crackpipe01")
@@ -1706,12 +1706,12 @@ AddEventHandler('inv:dogshit', function()
 end)
 
 
-    if (itemid == "jailfood") then  
+    if (itemid == "jailfood") then
         AttachPropAndPlayAnimation("mp_player_inteat@burger", "mp_player_int_eat_burger", 49,6000,"Eating","inv:wellfed",true,itemid,playerVeh)
     end
 
     -- BURGERSHOT START
-    if (itemid == "heartstopper" or itemid == "torpedo") then  
+    if (itemid == "heartstopper" or itemid == "torpedo") then
         AttachPropAndPlayAnimation("mp_player_inteat@burger", "mp_player_int_eat_burger", 49,6000,"Eating","inv:wellfed",true,itemid,playerVeh)
         TriggerEvent('strongevent')
         TriggerEvent('stressbuff')
@@ -1724,40 +1724,40 @@ end)
     end
 
     if (itemid == "greentea") then
-        AttachPropAndPlayAnimation("mp_player_inteat@burger", "mp_player_int_eat_burger", 49,6000,"Eating","inv:wellfed",true,itemid,playerVeh)    
+        AttachPropAndPlayAnimation("mp_player_inteat@burger", "mp_player_int_eat_burger", 49,6000,"Eating","inv:wellfed",true,itemid,playerVeh)
         TriggerEvent('luckevent')
     end
 
     -- hightable shit
     if (itemid == "greentea") then
-        AttachPropAndPlayAnimation("mp_player_inteat@burger", "mp_player_int_eat_burger", 49,6000,"Eating","inv:wellfed",true,itemid,playerVeh)    
+        AttachPropAndPlayAnimation("mp_player_inteat@burger", "mp_player_int_eat_burger", 49,6000,"Eating","inv:wellfed",true,itemid,playerVeh)
         TriggerEvent('luckevent')
     end
 
     if (itemid == "ramunesoda") then
-        AttachPropAndPlayAnimation("mp_player_inteat@burger", "mp_player_int_eat_burger", 49,6000,"Eating","inv:wellfed",true,itemid,playerVeh)    
+        AttachPropAndPlayAnimation("mp_player_inteat@burger", "mp_player_int_eat_burger", 49,6000,"Eating","inv:wellfed",true,itemid,playerVeh)
         TriggerEvent('luckevent')
         TriggerEvent('strongevent')
     end
 
     if (itemid == "bubbletea") then
-        AttachPropAndPlayAnimation("mp_player_inteat@burger", "mp_player_int_eat_burger", 49,6000,"Eating","inv:wellfed",true,itemid,playerVeh)    
+        AttachPropAndPlayAnimation("mp_player_inteat@burger", "mp_player_int_eat_burger", 49,6000,"Eating","inv:wellfed",true,itemid,playerVeh)
         TriggerEvent('luckevent')
     end
 
-    if (itemid == "udon") then  
+    if (itemid == "udon") then
         AttachPropAndPlayAnimation("mp_player_inteat@burger", "mp_player_int_eat_burger", 49,6000,"Eating","inv:wellfed",true,itemid,playerVeh)
         TriggerEvent('strongevent')
         TriggerEvent('intelevent')
     end
 
-    if (itemid == "ramen") then  
+    if (itemid == "ramen") then
         AttachPropAndPlayAnimation("mp_player_inteat@burger", "mp_player_int_eat_burger", 49,6000,"Eating","inv:wellfed",true,itemid,playerVeh)
         TriggerEvent('stressbuff')
         TriggerEvent('intelevent')
     end
 
-    if (itemid == "tonkatsu") then  
+    if (itemid == "tonkatsu") then
         AttachPropAndPlayAnimation("mp_player_inteat@burger", "mp_player_int_eat_burger", 49,6000,"Eating","inv:wellfed",true,itemid,playerVeh)
         TriggerEvent('strongevent')
         TriggerEvent('armorbuff')
@@ -1810,7 +1810,7 @@ end
             remove = true
         end
     end
-    
+
     if (itemid == "softdrink") then
         TriggerEvent("animation:PlayAnimation","drink")
         TriggerEvent("attachItem", itemid)
@@ -1829,8 +1829,8 @@ end
         end
     end
 
-    if (itemid == "meth1g") then 
-        local finished = exports["warp-ui"]:taskBarSkill(3000, math.random(15, 20))  -- WHOEVER DID THIS IS ACTAULLY A FUCKING RETARD 
+    if (itemid == "meth1g") then
+        local finished = exports["warp-ui"]:taskBarSkill(3000, math.random(15, 20))  -- WHOEVER DID THIS IS ACTAULLY A FUCKING RETARD
         if (finished == 100 and hasEnoughOfItem(itemid, 1, false)) then
             TriggerEvent("attachItemObjectnoanim","crackpipe01")
             TaskItem("switch@trevor@trev_smoking_meth", "trev_smoking_meth_loop", 49,1000,"Smoking some meth","hadmeth",true,itemid,playerVeh)
@@ -1873,9 +1873,9 @@ end
 
     if (itemid == "shitlockpick") then
         lockpicking = true
-        TriggerEvent("animation:lockpickinvtestoutside") 
+        TriggerEvent("animation:lockpickinvtestoutside")
         local finished = exports["warp-taskbar"]:taskBar(2500,math.random(5,20))
-        if (finished == 100) then    
+        if (finished == 100) then
             TriggerEvent("police:uncuffMenu")
         end
         lockpicking = false
@@ -2074,7 +2074,7 @@ function loadAnimDict( dict )
 end
 
 function TaskItem(dictionary,animation,typeAnim,timer,message,func,remove,itemid,playerVeh,itemreturn,itemreturnid)
-    loadAnimDict( dictionary ) 
+    loadAnimDict( dictionary )
     TaskPlayAnim( PlayerPedId(), dictionary, animation, 8.0, 1.0, -1, typeAnim, 0, 0, 0, 0 )
     local timer = tonumber(timer)
     if timer > 0 then
@@ -2102,8 +2102,8 @@ function GetCurrentWeapons()
             local t = { ["hash"] = v.item_id, ["id"] = v.id, ["information"] = v.information, ["name"] = v.item_id, ["slot"] = v.slot }
             returnTable[#returnTable+1]=t
         end
-    end   
-    if returnTable == nil then 
+    end
+    if returnTable == nil then
         return {}
     end
     return returnTable
@@ -2128,7 +2128,7 @@ function hasEnoughOfItem(itemid,amount,shouldReturnText)
 
     if getQuantity(itemid) >= amount then
         return true
-    end 
+    end
     return false
 end
 
@@ -2141,7 +2141,7 @@ function isValidUseCase(itemID,isWeapon)
             if IsEntityInAir(playerVeh) then
                 Wait(1000)
                 if IsEntityInAir(playerVeh) then
-                    TriggerEvent("DoLongHudText","You appear to be flying through the air",2) 
+                    TriggerEvent("DoLongHudText","You appear to be flying through the air",2)
                     return false
                 end
             end
@@ -2154,13 +2154,13 @@ function isValidUseCase(itemID,isWeapon)
             Wait(700)
             local plyCoords = GetEntityCoords(player, 0)
             if #(targetCoords - plyCoords) > 1.3 then
-                TriggerEvent("DoLongHudText","Cannot be moving while swimming to use this.",2) 
+                TriggerEvent("DoLongHudText","Cannot be moving while swimming to use this.",2)
                 return false
             end
         end
 
         if IsPedSwimmingUnderWater(player) then
-            TriggerEvent("DoLongHudText","Cannot be underwater to use this.",2) 
+            TriggerEvent("DoLongHudText","Cannot be underwater to use this.",2)
             return false
         end
     end
@@ -2172,7 +2172,7 @@ end
 
 RegisterNetEvent('evidence:addDnaSwab')
 AddEventHandler('evidence:addDnaSwab', function(dna)
-    TriggerEvent("DoLongHudText", "DNA Result: " .. dna,1)    
+    TriggerEvent("DoLongHudText", "DNA Result: " .. dna,1)
 end)
 
 RegisterNetEvent('CheckDNA')
@@ -2204,7 +2204,7 @@ function GetClosestPlayer()
     local closestPlayer = -1
     local ply = PlayerPedId()
     local plyCoords = GetEntityCoords(ply, 0)
-    
+
     for index,value in ipairs(players) do
         local target = GetPlayerPed(value)
         if(target ~= ply) then
@@ -2216,7 +2216,7 @@ function GetClosestPlayer()
             end
         end
     end
-    
+
     return closestPlayer, closestDistance
 end
 
@@ -2231,16 +2231,16 @@ function getVehicleInDirection(coordFrom, coordTo)
     local vehicle
 
     for i = 0, 100 do
-        rayHandle = CastRayPointToPoint(coordFrom.x, coordFrom.y, coordFrom.z, coordTo.x, coordTo.y, coordTo.z + offset, 10, PlayerPedId(), 0)   
+        rayHandle = CastRayPointToPoint(coordFrom.x, coordFrom.y, coordFrom.z, coordTo.x, coordTo.y, coordTo.z + offset, 10, PlayerPedId(), 0)
         a, b, c, d, vehicle = GetRaycastResult(rayHandle)
-        
+
         offset = offset - 1
 
         if vehicle ~= 0 then break end
     end
-    
+
     local distance = Vdist2(coordFrom, GetEntityCoords(vehicle))
-    
+
     if distance > 25 then vehicle = nil end
 
     return vehicle ~= nil and vehicle or 0
@@ -2270,8 +2270,8 @@ AddEventHandler('animation:lockpickinvtestoutside', function()
     while not HasAnimDictLoaded("veh@break_in@0h@p_m_one@") do
         Citizen.Wait(0)
     end
-    
-    while lockpicking do        
+
+    while lockpicking do
         TaskPlayAnim(lPed, "veh@break_in@0h@p_m_one@", "low_force_entry_ds", 1.0, 1.0, 1.0, 16, 0.0, 0, 0, 0)
         Citizen.Wait(2500)
     end
@@ -2471,7 +2471,7 @@ AddEventHandler('inv:lockPick', function(isForced, inventoryName, slot, itemType
             -- if carTimer > 180000 then
             --     carTimer = 180000
             -- end
-            
+
             -- carTimer = math.ceil(carTimer / 3)
 
 
@@ -2572,7 +2572,7 @@ AddEventHandler('InventoryAdvanced:lockPick', function(isForced,inventoryName,sl
 
 
 
- 
+
             local finished = exports["warp-ui"]:taskBarSkill(15000,3)
 
             if finished ~= 100 then
@@ -2617,7 +2617,7 @@ AddEventHandler('InventoryAdvanced:lockPick', function(isForced,inventoryName,sl
             TriggerEvent("animation:lockpickinvtest")
             TriggerServerEvent('InteractSound_SV:PlayWithinDistance', 3.0, 'lockpick', 0.4)
 
-           
+
             local carTimer = GetVehicleHandlingFloat(targetVehicle, 'CHandlingData', 'nMonetaryValue')
             if carTimer == nil then
                 carTimer = math.random(25000,180000)
@@ -2629,7 +2629,7 @@ AddEventHandler('InventoryAdvanced:lockPick', function(isForced,inventoryName,sl
             if carTimer > 180000 then
                 carTimer = 180000
             end
-            
+
             carTimer = math.ceil(carTimer / 3)
 
 
@@ -2653,10 +2653,10 @@ AddEventHandler('InventoryAdvanced:lockPick', function(isForced,inventoryName,sl
             local finished = exports["warp-ui"]:taskBarSkill(1500,math.random(5,10))
             if finished ~= 100 then
                 TriggerEvent("DoLongHudText", "The lockpick bent out of shape.",2)
-                TriggerEvent("inventory:DegenLastUsedItem", 20)             
+                TriggerEvent("inventory:DegenLastUsedItem", 20)
                  lockpicking = false
                 return
-            end     
+            end
 
 
             Citizen.Wait(500)
@@ -2713,12 +2713,12 @@ AddEventHandler('veh:repairing', function(inventoryName,slot,itemid)
 
         if reapiring then return end
         reapiring = true
-        
+
         local timeout = 20
 
         NetworkRequestControlOfEntity(targetVehicle)
 
-        while not NetworkHasControlOfEntity(targetVehicle) and timeout > 0 do 
+        while not NetworkHasControlOfEntity(targetVehicle) and timeout > 0 do
             NetworkRequestControlOfEntity(targetVehicle)
             Citizen.Wait(100)
             timeout = timeout -1
@@ -2772,7 +2772,7 @@ AddEventHandler('veh:repairing', function(inventoryName,slot,itemid)
             end
 
             if finished == 100 then
-                
+
                 local myJob = exports["isPed"]:isPed("myJob")
                 if myJob == "towtruck" then
 
@@ -2829,17 +2829,17 @@ AddEventHandler('veh:repairing', function(inventoryName,slot,itemid)
 
                         if fueltankhealth < 2900.0 then
                             SetVehiclePetrolTankHealth(targetVehicle, 2900.0)
-                        end                        
+                        end
 
                         if GetEntityModel(targetVehicle) == `BLAZER` then
                             SetVehicleEngineHealth(targetVehicle, 600.0)
                             SetVehicleBodyHealth(targetVehicle, 800.0)
                         end
-                    end                    
+                    end
                 end
 
                 for i = 0, 5 do
-                    SetVehicleTyreFixed(targetVehicle, i) 
+                    SetVehicleTyreFixed(targetVehicle, i)
                 end
             end
             ClearPedTasks(playerped)
